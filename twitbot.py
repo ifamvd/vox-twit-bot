@@ -29,6 +29,7 @@ auth.set_access_token(access_token, access_secret)
 api = tp.API(auth)
 
 # post the links
-for i in url:
-    api.update_status("Via TweePy: " + i)
-    time.sleep(5)
+#for i in url:
+#    api.update_status("VOX Top Story: " + i)
+#    time.sleep(5)
+api.update_status("VOX Top Story: " + url[0])
