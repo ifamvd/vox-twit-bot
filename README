@@ -1,0 +1,4 @@
+This is a repository for working with twitter API through Python. As a practice,
+using BeautifulSoup, I fetch all the links from VOX Top Stories contents to post
+on my Twitter account. This is purely for learning and understanding how Twitter
+API works through the Tweepy Python module.
