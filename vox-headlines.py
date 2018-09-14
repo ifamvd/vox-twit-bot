@@ -16,5 +16,12 @@ url = 'https://www.vox.com'
 page = requests.get(url)
 soup = bs(page.text, 'html.parser')
 # find the top stories headlines
-stories = soup.find("div", class_="c-newspaper__main")
-print(stories)
+headlines = soup.find("div", class_="c-newspaper__main")
+headline_titles = headlines.find_all("h2", class_="c-entry-box--compact__title")
+links = ""
+for headline_title in headline_titles:
+    headline_link = headline_title.find("a")
+    links += headline_link['href'] + "\n"
+    # print(link_source)
+with open('links.txt', 'w') as f:
+    f.write(links)
